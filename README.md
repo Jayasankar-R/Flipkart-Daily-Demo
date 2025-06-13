@@ -29,4 +29,36 @@ This is a simplified backend inventory management system designed as a demo for 
 ---
 
 ## 📁 Project Structure
+```
+src/
+├── controller/ # REST API layer
+├── service/ # Business logic
+├── repository/ # In-memory data store
+├── models/ # Item entity
+├── dto/ # Request DTOs for input validation
+└── FlipkartDailyDemoApplication.java
+```
+
+---
+
+## 📬 API Endpoints
+
+### 1. **Add Item**
+```http
+POST /api/inventory/add-item?brand=Apple&category=Mobile&price=999
+```
+### 2. **Add Stock**
+```
+POST /api/inventory/add-stock?brand=Apple&category=Mobile&qty=10
+```
+### 3. **Search**
+```
+GET /api/inventory/search?brand=Apple&category=Mobile&fromPrice=500&toPrice=1500&orderBy=price&order=asc
+```
+### 4. **Inventory**
+```
+GET /api/inventory/view
+```
+
+
 
